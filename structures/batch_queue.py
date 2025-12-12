@@ -1,23 +1,29 @@
 # structures/batch_queue.py
-from collections import deque
 
 class BatchQueue:
-    """
-    Buffer FIFO de batches. Encolado y desencolado O(1).
-    """
-    def __init__(self, max_batches=10):
-        self.q = deque()
-        self.max_batches = max_batches
+    """Cola circular para manejar lotes en O(1)."""
 
-    def push(self, batch):
-        if len(self.q) >= self.max_batches:
-            self.q.popleft()  # descarta el más viejo
-        self.q.append(batch)
+    def __init__(self, capacity):
+        self.data = [None] * capacity
+        self.capacity = capacity
+        self.front = 0
+        self.rear = 0
+        self.size = 0
 
-    def pop(self):
-        if self.q:
-            return self.q.popleft()
-        return None
+    def enqueue(self, item):
+        if self.size == self.capacity:
+            raise Exception("Queue full")
+        self.data[self.rear] = item
+        self.rear = (self.rear + 1) % self.capacity
+        self.size += 1
 
-    def __len__(self):
-        return len(self.q)
+    def dequeue(self):
+        if self.size == 0:
+            raise Exception("Queue empty")
+        item = self.data[self.front]
+        self.front = (self.front + 1) % self.capacity
+        self.size -= 1
+        return item
+
+    def is_empty(self):
+        return self.size == 0
