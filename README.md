@@ -1,1 +1,1 @@
-# Dise-o-de-algoritmo
+# Diseno-de-algoritmo
