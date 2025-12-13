@@ -17,7 +17,7 @@ def graph_batch_size():
     plt.xlabel("Batch Size")
     plt.ylabel("Tiempo (s)")
     plt.grid(True)
-    plt.savefig("batch_size_time.png")
+    plt.savefig("graphs/batch_size_time.png")
     print("Imagen guardada: batch_size_time.png")
 
     # ---- Gráfica de Accuracy ----
@@ -27,7 +27,7 @@ def graph_batch_size():
     plt.xlabel("Batch Size")
     plt.ylabel("Accuracy")
     plt.grid(True)
-    plt.savefig("batch_size_accuracy.png")
+    plt.savefig("graphs/batch_size_accuracy.png")
     print("Imagen guardada: batch_size_accuracy.png")
 
 if __name__ == "__main__":

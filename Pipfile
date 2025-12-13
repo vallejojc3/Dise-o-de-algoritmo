@@ -8,6 +8,9 @@ numpy = "*"
 scikit-learn = "*"
 pandas = "*"
 matplotlib = "*"
+discord = "*"
+psutil = "*"
+flask = "*"
 
 [dev-packages]
 
