@@ -1,4 +1,4 @@
-DISCORD_TOKEN = "MTQ0OTE1NDE1NzA0MTgxMTU0Nw.GhizXi.ErklovwH5LMrP2OdtIFS3oJHr-nxjtVQgLt8tE"
+DISCORD_TOKEN = ""
 
 PROJECT_PATH = r"C:\Users\valle\OneDrive\Desktop\Universidad\Algoritmos\proyecto1\Dise-o-de-algoritmo"
 
